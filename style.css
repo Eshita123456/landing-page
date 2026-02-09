@@ -1,0 +1,742 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* GLOBAL */
+body {
+    margin: 0;
+    font-family: "Poppins", Arial, sans-serif;
+    color: #111;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* TOP RERA BAR */
+.top-rera-bar {
+    background: #ffffff;
+    font-size: 13px;
+    padding: 4px 15px;
+    text-align: right;
+    color: #000;
+    line-height: 1.2;
+}
+
+/* APPLICATION STRIP (TEXT ONLY HIGHLIGHT) */
+.application-strip {
+    background: transparent;
+    /* ⬅ full yellow hata diya */
+    text-align: center;
+    padding: 6px 0;
+}
+
+.application-strip span {
+    display: inline-block;
+    background: #f5c400;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    padding: 6px 14px;
+    /* ⬅ tight like brochure */
+}
+
+/* HERO */
+.rera-hero {
+    background: #eef6ff;
+    padding: 28px 0 34px;
+    /* ⬅ compact */
+    position: relative;
+    text-align: center;
+}
+
+.hero-inner {
+    position: relative;
+}
+
+/* LOGOS (MOVED DOWN & BALANCED) */
+.rera-logo-left {
+    position: absolute;
+    left: 0;
+    top: 110px;
+    /* ⬅ niche */
+    width: 180px;
+    /* ⬅ brochure proportion */
+}
+
+.rera-exempted {
+    position: absolute;
+    right: 0;
+    top: 110px;
+    /* ⬅ niche */
+    width: 150px;
+    animation: pulse 2.5s infinite;
+}
+
+/* TEXT */
+.rera-hero h1 {
+    font-size: 38px;
+    color: #2b2f92;
+    font-weight: 800;
+    margin: 12px 0 6px;
+}
+
+.rera-law {
+    font-size: 25px;
+    /* ⬅ reduced */
+    margin: 0;
+}
+
+.rera-location {
+    font-size: 28px;
+    /* ⬅ brochure size */
+    font-weight: 700;
+    margin: 10px 0 18px;
+}
+
+/* REGISTRATION RIBBON (ATTACHED) */
+.registration-box {
+    display: inline-block;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.reg-amount {
+    background: #e53935;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 800;
+    padding: 10px 26px;
+}
+
+.reg-note {
+    background: #ffeb3b;
+    color: #000;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 6px 18px;
+    margin-top: -2px;
+}
+
+/* HINDI STRIP */
+.reservation-strip {
+    background: #4a5bb0;
+    color: #fff;
+    text-align: center;
+    font-size: 24px;
+    /* ⬅ capture match */
+    font-weight: 800;
+    padding: 12px 10px;
+}
+
+/* REGISTRATION RIBBON */
+.registration-ribbon {
+    display: inline-block;
+    margin-top: 12px;
+    font-family: "Poppins", Arial, sans-serif;
+}
+
+/* RED PART */
+.ribbon-red {
+    background: #e53935;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 800;
+    padding: 10px 28px;
+    position: relative;
+    text-align: center;
+}
+
+/* ANGLED SIDES (OPTIONAL BUT BROCHURE FEEL) */
+.ribbon-red::before,
+.ribbon-red::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-top: 22px solid transparent;
+    border-bottom: 22px solid transparent;
+}
+
+.ribbon-red::before {
+    left: -14px;
+    border-right: 14px solid #e53935;
+}
+
+.ribbon-red::after {
+    right: -14px;
+    border-left: 14px solid #e53935;
+}
+
+/* YELLOW PART (ATTACHED) */
+.ribbon-yellow {
+    background: #ffeb3b;
+    color: #000;
+    font-size: 19px;
+    font-weight: 700;
+    padding: 6px 18px;
+    margin-top: -2px;
+    /* 🔥 makes it ATTACHED */
+    text-align: center;
+}
+
+/* REGISTER BUTTON */
+.register-btn-wrap {
+  margin-top: 18px;
+  text-align: center;
+}
+
+.register-btn {
+  display: inline-block;
+  background: #e53935;          /* strong red CTA */
+  color: #fff;
+  font-size: 18px;
+  font-weight: 800;
+  padding: 14px 38px;
+  border-radius: 4px;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  box-shadow: 0 6px 0 #b71c1c;  /* brochure-style depth */
+  transition: all 0.25s ease;
+}
+
+.register-btn:hover {
+  background: #c62828;
+  transform: translateY(2px);
+  box-shadow: 0 4px 0 #8e0000;
+}
+
+/* POPUP OVERLAY */
+.form-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+/* POPUP BOX */
+.form-popup {
+  background: #fff;
+  width: 100%;
+  max-width: 420px;
+  padding: 25px 22px;
+  border-radius: 6px;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.form-popup h3 {
+  margin: 0 0 15px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 800;
+  color: #2b2f92;
+}
+
+/* INPUTS */
+.form-popup input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* SUBMIT BUTTON */
+.submit-btn {
+  width: 100%;
+  background: #e53935;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 800;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background: #c62828;
+}
+
+/* CLOSE BUTTON */
+.close-btn {
+  position: absolute;
+  right: 12px;
+  top: 8px;
+  font-size: 26px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+
+/* ANIMATION */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+    .rera-logo-left,
+    .rera-exempted {
+        position: static;
+        margin: 10px auto;
+        display: block;
+    }
+
+    .rera-hero h1 {
+        font-size: 24px;
+    }
+
+    .rera-location {
+        font-size: 16px;
+    }
+
+    .reservation-strip {
+        font-size: 18px;
+    }
+}
+
+/* SECTION */
+.adv-amenities {
+    padding: 40px 0;
+    background: #f2f2f2;
+}
+
+.adv-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+/* CARD */
+.adv-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    /* brochure style soft */
+}
+
+.adv-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* ADVANTAGES OVERLAY */
+.adv-overlay {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    right: 16px;
+    background: #f4b400;
+    /* solid yellow */
+    padding: 16px 18px;
+}
+
+.adv-title {
+    background: #e53935;
+    color: #fff;
+    font-weight: 800;
+    padding: 6px 14px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.adv-overlay ul {
+    margin: 0;
+    padding-left: 18px;
+}
+
+.adv-overlay li {
+    font-size: 14px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 6px;
+}
+
+/* AMENITIES OVERLAY */
+.amenities-overlay {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    right: 16px;
+    background: #f0eaea;
+    /* brochure blue */
+    padding: 18px;
+    color: hsl(0, 0%, 100%);
+}
+
+.amenities-title {
+    background: #3f5fbf;
+    padding: 6px 16px;
+    font-weight: 800;
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+/* AMENITIES LIST */
+.amenities-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.amenities-list ul {
+    margin: 0;
+    padding-left: 18px;
+}
+
+.amenities-list li {
+    font-size: 14px;
+    margin-bottom: 6px;
+    color: #000;
+    /* 🔥 BLACK TEXT */
+    font-weight: 600;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .adv-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .amenities-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* GALLERY */
+.gallery {
+    padding: 60px 0;
+    background: #ffffff;
+}
+
+.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.img-box {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    height: 220px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+/* HOVER EFFECT */
+.img-box:hover img {
+    transform: scale(1.08);
+}
+
+/* TITLE OVERLAY */
+.img-box span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 12px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .grid-4 {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* TABLE */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th,
+table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+table th {
+    background: #1f3c88;
+    color: #fff;
+}
+
+/* STATE OF THE ART – NO CIRCLE */
+.state-art {
+    padding: 70px 0 60px;
+    background: #ffffff;
+}
+
+.state-art .section-title {
+    text-align: center;
+    font-size: 26px;
+    font-weight: 700;
+    color: #1f3c88;
+    margin-bottom: 50px;
+    letter-spacing: 1px;
+}
+
+/* GRID */
+.state-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 30px;
+    text-align: center;
+}
+
+/* ITEM */
+.state-item img {
+    width: 150px;
+    /* ⬅ BIG ICON */
+    height: 150px;
+    object-fit: contain;
+}
+
+.state-item p {
+    margin-top: 14px;
+    font-size: 14px;
+    color: #1f3c88;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+/* HOVER EFFECT (CLEAN) */
+.state-item:hover img {
+    transform: scale(1.08);
+    transition: 0.3s ease;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1200px) {
+    .state-grid {
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 40px;
+    }
+}
+
+@media (max-width: 576px) {
+    .state-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .state-item img {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+/* BANK LOAN SECTION */
+.bank-loans {
+    background: #ffffff;
+    border-top: 2px solid #e0e0e0;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+/* BLUE TITLE BAR */
+.bank-title {
+    background: #4a5fa8;
+    color: #ffffff;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 0;
+    letter-spacing: 0.5px;
+}
+
+/* LOGO ROW */
+.bank-logos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px 0;
+    flex-wrap: wrap;
+}
+
+/* LOGO SIZE CONTROL */
+.bank-logos img {
+    max-height: 45px;
+    /* ⬅ matches brochure */
+    width: auto;
+    object-fit: contain;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+    .bank-logos {
+        justify-content: center;
+    }
+
+    .bank-logos img {
+        max-height: 40px;
+    }
+}
+
+@media (max-width: 576px) {
+    .bank-logos {
+        gap: 15px;
+    }
+
+    .bank-logos img {
+        max-height: 35px;
+    }
+}
+
+/* REGISTRATION STRIP */
+.registration-strip {
+    background: #ffd200;
+    padding: 10px 0;
+    /* ⬅ reduced padding */
+    border-top: 1px solid #d9b300;
+    border-bottom: 1px solid #d9b300;
+}
+
+.reg-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* LEFT */
+.reg-left span {
+    display: block;
+    font-size: 13px;
+    /* ⬅ smaller */
+    color: #000;
+    margin-bottom: 2px;
+    /* ⬅ tighter */
+}
+
+.reg-left strong {
+    font-size: 19px;
+    /* ⬅ slightly reduced */
+    font-weight: 800;
+    color: #000;
+}
+
+/* CENTER QR */
+.reg-center {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    /* ⬅ QR & text closer */
+}
+
+.reg-center img {
+    width: 58px;
+    /* ⬅ slightly smaller QR */
+    height: 58px;
+}
+
+.qr-text {
+    font-size: 9px;
+    /* ⬅ smaller text */
+    font-weight: 700;
+    color: #000;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    letter-spacing: 0.4px;
+}
+
+/* RIGHT */
+.reg-right {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    /* ⬅ tighter */
+}
+
+.reg-right span {
+    font-size: 15px;
+    /* ⬅ reduced */
+    color: #000;
+}
+
+.reg-right strong {
+    font-size: 24px;
+    /* ⬅ reduced */
+    font-weight: 900;
+    color: #000;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .reg-flex {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+
+    .qr-text {
+        writing-mode: horizontal-tb;
+        transform: none;
+        font-size: 10px;
+    }
+}
+
+/* DISCLAIMER SECTION */
+.disclaimer-section {
+    background: #ffffff;
+    border-top: 1px solid #dcdcdc;
+    padding: 10px 0 14px;
+}
+
+.disclaimer-section p {
+    font-size: 11px;
+    /* ⬅ small like brochure */
+    line-height: 1.5;
+    color: #333;
+    margin: 0;
+    text-align: justify;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+    .grid-2,
+    .grid-4,
+    .grid-6 {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 22px;
+    }
+}

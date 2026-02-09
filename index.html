@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>RERA Registered Independent Flats | Karjat</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- TOP MAHA RERA INFO -->
+  <div class="top-rera-bar">
+    MAHA RERA REGISTRATION NO: P52000045327 / P52000079519<br>
+    &nbsp;&nbsp;www.flatsonlineregistration.com
+  </div>
+
+  <!-- APPLICATION INVITED STRIP -->
+  <div class="application-strip">
+    <span>APPLICATIONS INVITED FOR RESIDENTIALS NEAR NAVI MUMBAI INTERNATIONAL AIRPORT</span>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section class="rera-hero">
+    <div class="container hero-inner">
+
+      <!-- LEFT LOGO -->
+      <img src="./images/rera-logo.png" class="rera-logo-left" alt="RERA">
+
+      <!-- RIGHT STAMP -->
+      <img src="./images/rera-exempted.png" class="rera-exempted" alt="RERA Exempted">
+
+      <h1>RERA REGISTERED FREEHOLD INDEPENDENT FLATS</h1>
+
+      <p class="rera-law">
+        (Under S. 44 &amp; 45 of Maharashtra Regional and Town Planning Act, 1966 (Govt. of Maharashtra))
+      </p>
+
+      <p class="rera-location">
+        KARJAT – MURBAD HIGHWAY, AT POST KASHELE TAL. KARJAT,<br>
+        DISTRICT – RAIGARH, MAHARASHTRA
+      </p>
+
+      <!-- REGISTRATION RIBBON -->
+      <div class="registration-ribbon">
+        <div class="ribbon-red">
+          Registration Amount: ₹11,000/-
+        </div>
+        <div class="ribbon-yellow">
+          100% REFUNDABLE IN CASE OF NON-ALLOTMENT
+        </div>
+      </div>
+
+      <!-- REGISTER BUTTON -->
+      <div class="register-btn-wrap">
+        <button class="register-btn" onclick="openForm()">REGISTER NOW</button>
+      </div>
+
+      <!-- POPUP OVERLAY -->
+      <div id="formOverlay" class="form-overlay">
+        <div class="form-popup">
+          <span class="close-btn" onclick="closeForm()">×</span>
+
+          <h3>Registration Form</h3>
+
+          <form id="registrationForm" onsubmit="return validateForm()">
+            <input type="text" id="name" placeholder="Full Name" required>
+
+            <input type="tel" id="mobile" placeholder="Mobile Number" required>
+
+            <input type="email" id="email" placeholder="Email Address" required>
+
+            <input type="text" id="city" placeholder="City" required>
+
+            <button type="submit" class="submit-btn">Submit</button>
+          </form>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+  <!-- HINDI STRIP -->
+  <div class="reservation-strip">
+    33% महिलाओं और सरकारी कर्मचारियों के लिए स्वर्णिम अवसर
+  </div>
+  <section class="adv-amenities">
+    <div class="container adv-grid">
+
+      <!-- LEFT : ADVANTAGES -->
+      <div class="adv-card">
+        <img src="images/ChatGPT Image Feb 9, 2026, 11_33_31 AM.png" alt="Navi Mumbai Airport">
+
+        <div class="adv-overlay">
+          <span class="adv-title">ADVANTAGES</span>
+          <ul>
+            <li>25 min drive from Navi Mumbai Airport</li>
+            <li>30 min drive from Mumbai–Pune Highway</li>
+            <li>Being on Murbad–Karjat Highway</li>
+            <li>Proposed Metro link to Karjat for seamless travel</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- RIGHT : AMENITIES -->
+      <div class="adv-card">
+        <img src="images/ChatGPT Image Feb 9, 2026, 11_34_00 AM.png" alt="Amenities">
+
+        <div class="amenities-overlay">
+          <span class="amenities-title">AMENITIES</span>
+
+          <div class="amenities-list">
+            <ul>
+              <li>Free maintenance with <strong>24/7 security</strong></li>
+              <li>Banquet Hall</li>
+              <li>Organic Farming</li>
+              <li>Restaurant & Café</li>
+              <li>5-Star Club House</li>
+            </ul>
+
+            <ul>
+              <li>Cricket Turf</li>
+              <li>Archery</li>
+              <li>Swimming Pool</li>
+              <li>Resort-style living</li>
+              <li>Nature-inspired surroundings</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PRICING TABLE -->
+  <section class="pricing">
+    <div class="container">
+      <h2 class="section-title">Pricing Details</h2>
+
+      <table>
+        <tr>
+          <th>Type</th>
+          <th>Area (Sq.Ft)</th>
+          <th>Registration</th>
+          <th>10% Booking</th>
+          <th>40% After Allotment</th>
+          <th>25% on OC</th>
+          <th>Total Cost</th>
+        </tr>
+
+        <tr>
+          <td>LIG 1 BHK</td>
+          <td>497</td>
+          <td>₹11,000</td>
+          <td>₹5,50,000</td>
+          <td>₹22,00,000</td>
+          <td>₹13,75,000</td>
+          <td>₹55,00,000</td>
+        </tr>
+
+        <tr>
+          <td>MIG 2 BHK</td>
+          <td>1294</td>
+          <td>₹11,000</td>
+          <td>₹17,50,000</td>
+          <td>₹70,00,000</td>
+          <td>₹43,75,000</td>
+          <td>₹1,75,00,000</td>
+        </tr>
+
+        <tr>
+          <td>HIG 3 BHK</td>
+          <td>1519</td>
+          <td>₹11,000</td>
+          <td>₹20,00,000</td>
+          <td>₹80,00,000</td>
+          <td>₹50,00,000</td>
+          <td>₹2,00,00,000</td>
+        </tr>
+      </table>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery">
+    <div class="container">
+      <h2 class="section-title">Project Gallery</h2>
+
+      <div class="grid-4">
+        <div class="img-box">
+          <img src="images/project 1.PNG" alt="Cricket Pitch & Residential View">
+        </div>
+
+        <div class="img-box">
+          <img src="images/project 2.PNG" alt="Luxury Banquet Hall">
+        </div>
+
+        <div class="img-box">
+          <img src="images/project 3.PNG" alt="Infinity Swimming Pool">
+        </div>
+
+        <div class="img-box">
+          <img src="images/project 4.PNG" alt="Multi Cuisine Restaurant">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATE OF THE ART -->
+  <!-- STATE OF THE ART -->
+  <section class="state-art">
+    <div class="container">
+      <h2 class="section-title">STATE OF THE ART</h2>
+
+      <div class="state-grid">
+
+        <div class="state-item">
+          <img src="images/Cricket pitch.png" alt="Cricket Pitch">
+          <p>Cricket Pitch</p>
+        </div>
+
+        <div class="state-item">
+          <img src="images/Terrace Skyplex.png" alt="Terrace Skyplex">
+          <p>Terrace Skyplex</p>
+        </div>
+
+        <div class="state-item">
+          <img src="images/Banquet Hall.png" alt="Banquet Hall">
+          <p>Banquet Hall</p>
+        </div>
+
+        <div class="state-item">
+          <img src="images/Multi Cuisine Restaurant.png" alt="Multi Cuisine Restaurant">
+          <p>Multi Cuisine Restaurant</p>
+        </div>
+
+        <div class="state-item">
+          <img src="images/Infinity Pool.png" alt="Infinity Pool">
+          <p>Infinity Lap Pool<br>on Terrace</p>
+        </div>
+
+        <div class="state-item">
+          <img src="images/Zero Maintenance.png" alt="Zero Maintenance">
+          <p>Zero Maintenance<br>Hassles</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- BANKS -->
+  <!-- BANK LOANS -->
+  <section class="bank-loans">
+    <div class="bank-title">
+      LOAN AVAILABLE FROM ALL LEADING BANKS
+    </div>
+
+    <div class="container">
+      <div class="bank-logos">
+        <img src="images/hdfc bank.PNG" alt="HDFC Bank">
+        <img src="images/sbi home loan.PNG" alt="SBI Home Loans">
+        <img src="images/icici.png" alt="ICICI Bank">
+        <img src="images/pnb.png" alt="Punjab National Bank">
+        <img src="images/union bank.PNG" alt="Union Bank of India">
+        <img src="images/indian bank.png" alt="Indian Bank">
+        <img src="images/bank of mathurem.PNG" alt="Bank of Maharashtra">
+        <img src="images/punjab and sind bank.PNG" alt="Punjab & Sind Bank">
+      </div>
+    </div>
+  </section>
+
+  <!-- REGISTRATION STRIP -->
+  <section class="registration-strip">
+    <div class="container reg-flex">
+
+      <!-- LEFT -->
+      <div class="reg-left">
+        <span>For Online Registration</span>
+        <strong>www.flatsonlineregistration.com</strong>
+      </div>
+
+      <!-- CENTER QR -->
+      <div class="reg-center">
+        <img src="images/qr-code.png" alt="Scan to Register">
+        <div class="qr-text">SCAN TO REGISTER</div>
+      </div>
+
+      <!-- RIGHT -->
+      <div class="reg-right">
+        <span>Helpline Number :</span>
+        <strong>0000-0000-00</strong>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- DISCLAIMER -->
+  <section class="disclaimer-section">
+    <div class="container">
+      <p>
+        <strong>Disclaimer:</strong> Promoter urges every applicant to inspect project site and shall not merely rely
+        upon any architectural impression, plan, sales brochure, advertisement, representations, statements of
+        whatsoever nature and therefore requests to make personal judgment prior to submitting an application for
+        allotment. Unless otherwise stated, all the images, visuals, materials and information contained herein are
+        purely creative/artistic and may not be actual representation of the product and/or any amenities. Further, the
+        actual design may vary in the final finished form. The company reserves the right to change, alter, add or
+        delete any of the specification mentioned herein with prior permission or notice. This registration amount is
+        only for expression of interest against booking & fully refundable in case of non-allocation. Rate mentioned
+        above does not include taxes and other statutory charges.
+      </p>
+    </div>
+  </section>
+
+
+  <script src="./script.js"></script>
+
+</body>
+
+</html>
