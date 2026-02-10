@@ -982,11 +982,12 @@ table tr:hover td {
   }
 }
 
-/* REGISTRATION STRIP */
+/* =====================
+   REGISTRATION STRIP
+===================== */
 .registration-strip {
     background: #ffd200;
-    padding: 10px 0;
-    /* ⬅ reduced padding */
+    padding: 12px 0;
     border-top: 1px solid #d9b300;
     border-bottom: 1px solid #d9b300;
 }
@@ -995,42 +996,44 @@ table tr:hover td {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+    gap: 16px;
 }
 
-/* LEFT */
+/* =====================
+   LEFT
+===================== */
 .reg-left span {
     display: block;
-    font-size: 25px;
-    /* ⬅ smaller */
+    font-size: clamp(16px, 2.5vw, 25px);
     color: #000;
     margin-bottom: 2px;
-    /* ⬅ tighter */
 }
 
 .reg-left strong {
-    font-size: 30px;
-    /* ⬅ slightly reduced */
+    font-size: clamp(20px, 3vw, 30px);
     font-weight: 800;
     color: #000;
 }
 
-/* CENTER QR */
+/* =====================
+   CENTER (QR)
+===================== */
 .reg-center {
     display: flex;
     align-items: center;
-    gap: 4px;
-    /* ⬅ QR & text closer */
+    gap: 6px;
 }
 
 .reg-center img {
-    width: 58px;
-    /* ⬅ slightly smaller QR */
-    height: 58px;
+    width: clamp(44px, 8vw, 58px);
+    height: auto;
 }
 
 .qr-text {
-    font-size: 9px;
-    /* ⬅ smaller text */
+    font-size: clamp(8px, 1.8vw, 10px);
     font-weight: 700;
     color: #000;
     writing-mode: vertical-rl;
@@ -1038,40 +1041,70 @@ table tr:hover td {
     letter-spacing: 0.4px;
 }
 
-/* RIGHT */
+/* =====================
+   RIGHT
+===================== */
 .reg-right {
     display: flex;
     align-items: center;
-    gap: 5px;
-    /* ⬅ tighter */
+    gap: 6px;
 }
 
 .reg-right span {
-    font-size: 25px;
-    font-weight: bold;
-    /* ⬅ reduced */
+    font-size: clamp(16px, 2.5vw, 25px);
+    font-weight: 700;
     color: #000;
 }
 
 .reg-right strong {
-    font-size: 30px;
-    /* ⬅ reduced */
+    font-size: clamp(20px, 3vw, 30px);
     font-weight: 900;
     color: #000;
 }
 
-/* RESPONSIVE */
+/* =====================
+   TABLET & MOBILE
+===================== */
 @media (max-width: 768px) {
     .reg-flex {
         flex-direction: column;
-        gap: 12px;
         text-align: center;
+        gap: 10px;
+    }
+
+    .reg-center {
+        order: 2;
+    }
+
+    .reg-left {
+        order: 1;
+    }
+
+    .reg-right {
+        order: 3;
     }
 
     .qr-text {
         writing-mode: horizontal-tb;
         transform: none;
         font-size: 10px;
+    }
+}
+
+/* =====================
+   SMALL MOBILE
+===================== */
+@media (max-width: 480px) {
+    .registration-strip {
+        padding: 10px 0;
+    }
+
+    .reg-flex {
+        gap: 8px;
+    }
+
+    .reg-right strong {
+        letter-spacing: 0.5px;
     }
 }
 
