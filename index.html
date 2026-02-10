@@ -106,7 +106,7 @@
       <!-- POPUP OVERLAY -->
       <div id="formOverlay" class="form-overlay">
         <div class="form-popup">
-          <span class="close-btn" onclick="closeForm()">×</span>
+          <button class="close-btn" onclick="closeForm()" aria-label="Close">×</button>
 
           <h3>Registration Form</h3>
 
@@ -123,8 +123,6 @@
           </form>
         </div>
       </div>
-
-
     </div>
   </section>
 
@@ -143,35 +141,41 @@
     <div class="container">
       <h2 class="section-title">Pricing Details</h2><br>
 
-      <table>
-        <tr>
-          <th>Type</th>
-          <th>Area (Sq.Ft)</th>
-          <th>Registration</th>
-          <th>10% Booking</th>
-          <th>40% After Allotment</th>
-          <th>25% on OC</th>
-          <th>Total Cost</th>
-        </tr>
+      <!-- RESPONSIVE WRAPPER -->
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th>Type</th>
+              <th>Area (Sq.Ft)</th>
+              <th>Registration</th>
+              <th>10% Booking</th>
+              <th>40% After Allotment</th>
+              <th>25% on OC</th>
+              <th>Total Cost</th>
+            </tr>
+          </thead>
 
-        <tr>
-          <td>1 BHK SUITES</td>
-          <td>497</td>
-          <td>₹11,000</td>
-          <td>₹5,50,000</td>
-          <td>₹22,00,000</td>
-          <td>₹13,75,000</td>
-          <td>₹55,00,000</td>
-        </tr>
-
-
-      </table>
+          <tbody>
+            <tr>
+              <td>1 BHK SUITES</td>
+              <td>497</td>
+              <td>₹11,000</td>
+              <td>₹5,50,000</td>
+              <td>₹22,00,000</td>
+              <td>₹13,75,000</td>
+              <td>₹55,00,000</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </section>
 
+  <!-- MOVING NOTE BELOW TABLE -->
   <div class="table-note-wrap">
     <div class="table-note-move">
-      * Any other charges levied by the Govt. & GST as applicable
+      * Any other charges levied by the Govt. &amp; GST as applicable
     </div>
   </div>
 
