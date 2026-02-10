@@ -771,7 +771,7 @@ table tr:hover td {
 }
 
 /* TITLE WITH LINE BREAK (ONLY THIS LINE EFFECT) */
-.section-title {
+.section-titles {
   position: relative;
   display: inline-block;
   padding: 0 25px;
@@ -783,8 +783,8 @@ table tr:hover td {
   margin-bottom: 50px;
 }
 
-.section-title::before,
-.section-title::after {
+.section-titles::before,
+.section-titles::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -793,11 +793,11 @@ table tr:hover td {
   background: #2c2c6c;
 }
 
-.section-title::before {
+.section-titles::before {
   left: -500px;
 }
 
-.section-title::after {
+.section-titles::after {
   right: -500px;
 }
 
@@ -850,16 +850,16 @@ table tr:hover td {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .section-title::before,
-  .section-title::after {
+  .section-titles::before,
+  .section-titles::after {
     width: 200px;
   }
 
-  .section-title::before {
+  .section-titles::before {
     left: -220px;
   }
 
-  .section-title::after {
+  .section-titles::after {
     right: -220px;
   }
 }
@@ -874,16 +874,16 @@ table tr:hover td {
     height: 95px;
   }
 
-  .section-title::before,
-  .section-title::after {
+  .section-titles::before,
+  .section-titles::after {
     width: 100px;
   }
 
-  .section-title::before {
+  .section-titles::before {
     left: -120px;
   }
 
-  .section-title::after {
+  .section-titles::after {
     right: -120px;
   }
 }
